@@ -6,11 +6,12 @@ html body {
   margin: 0;
 }
 html body .sec {
+  box-sizing: border-box;
+}
+html body .sec1 {
   padding: 10px 50px;
   height: 100%;
   max-height: 1200px;
-}
-html body .sec1 {
   background: url("../img/first/background.png") no-repeat;
   background-position: 100%;
   background-size: 57% 100%;
@@ -71,7 +72,6 @@ html body .sec1 .banner .info .login {
   color: #425bdb;
 }
 html body .sec1 .container {
-  box-sizing: border-box;
   display: flex;
   width: 100%;
   padding: 7% 18%;
@@ -173,7 +173,6 @@ html body .sec2 .side-right {
   width: 23%;
 }
 html body .sec3 {
-  box-sizing: border-box;
   width: 100%;
   padding: 14% 12% 0;
   clear: right;
@@ -220,7 +219,6 @@ html body .sec4 {
   background: url("../img/forth/background1.png") no-repeat;
   background-size: 100% 100%;
   display: flex;
-  box-sizing: border-box;
   width: 100%;
   padding: 0 15%;
   margin-bottom: 10%;
@@ -260,7 +258,6 @@ html body .sec4 .wrapper img {
 }
 html body .sec5 {
   display: flex;
-  box-sizing: border-box;
   margin-bottom: 5%;
   width: 100%;
   padding: 0 10%;
@@ -307,7 +304,6 @@ html body .sec6 {
   background: url("../img/sixth/background.png") no-repeat;
   background-position: right;
   display: flex;
-  box-sizing: border-box;
   width: 100%;
   background-size: 50% 100%;
   padding: 0 15%;
