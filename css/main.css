@@ -14,6 +14,7 @@ html body .sec1 {
   background: url("../img/first/background.png") no-repeat;
   background-position: 100%;
   background-size: 57% 100%;
+  margin-bottom: -6%;
 }
 html body .sec1 .banner {
   height: 35px;
@@ -36,9 +37,27 @@ html body .sec1 .banner .info a {
   margin-left: 10px;
 }
 html body .sec1 .banner .info button {
-  width: 70px;
-  height: 35px;
   border-radius: 5px;
+}
+@media screen and (min-width: 1600px) {
+  html body .sec1 .banner .info a {
+    font-size: 14px;
+  }
+  html body .sec1 .banner .info button {
+    width: 90px;
+    height: 44px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  html body .sec1 .banner .info a {
+    font-size: 12px;
+  }
+  html body .sec1 .banner .info button {
+    width: 63px;
+    height: 30px;
+    font-size: 12px;
+  }
 }
 html body .sec1 .banner .info .register {
   margin-left: 100px;
@@ -69,22 +88,27 @@ html body .sec1 .container .text1 .divider {
   margin-bottom: 10px;
 }
 html body .sec1 .container .text1 h1 {
-  font-size: 50px;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 1600px) {
+  html body .sec1 .container .text1 h1 {
+    font-size: 50px;
+  }
+  html body .sec1 .container .text1 .description {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  html body .sec1 .container .text1 h1 {
+    font-size: 31px;
+  }
+  html body .sec1 .container .text1 .description {
+    font-size: 14px;
+  }
 }
 html body .sec1 .container .text1 .description {
-  font-size: 10px;
   color: #858c97;
   margin-bottom: 10px;
-}
-html body .sec1 .container .text1 .join {
-  width: 120px;
-  height: 44px;
-  background-image: linear-gradient(149deg, #9af9de 0%, #70a6fe 100%);
-  box-shadow: 0px 8px 20px 0px rgba(67, 175, 255, 0.29);
-  border-radius: 35px;
-  color: white;
-  font-size: 13px;
 }
 html body .sec1 .container .paint1 {
   flex: 8;
@@ -95,9 +119,11 @@ html body .sec1 .container .paint1 img {
 }
 html body .sec2 .side-left {
   margin-bottom: -8%;
+  width: 18%;
 }
 html body .sec2 .pros {
   padding: 0 21%;
+  margin-bottom: -6%;
 }
 html body .sec2 .pros .blocks {
   display: flex;
@@ -107,8 +133,29 @@ html body .sec2 .pros .blocks .pro {
   flex: 1;
   margin: 0 10px;
 }
+@media screen and (min-width: 1600px) {
+  html body .sec2 .pros .blocks .pro .num {
+    font-size: 72px;
+  }
+  html body .sec2 .pros .blocks .pro h3 {
+    font-size: 20px;
+  }
+  html body .sec2 .pros .blocks .pro p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  html body .sec2 .pros .blocks .pro .num {
+    font-size: 64px;
+  }
+  html body .sec2 .pros .blocks .pro h3 {
+    font-size: 18px;
+  }
+  html body .sec2 .pros .blocks .pro p {
+    font-size: 12px;
+  }
+}
 html body .sec2 .pros .blocks .pro .num {
-  font-size: 60px;
   background: -webkit-linear-gradient(left, #72ced9, #67b2f1);
   /* 背景色渐变 */
   -webkit-background-clip: text;
@@ -118,12 +165,12 @@ html body .sec2 .pros .blocks .pro .num {
   font-weight: bold;
 }
 html body .sec2 .pros .blocks .pro p {
-  font-size: 14px;
   color: #858c97;
 }
 html body .sec2 .side-right {
   float: right;
   margin-bottom: -23%;
+  width: 23%;
 }
 html body .sec3 {
   box-sizing: border-box;
@@ -131,9 +178,12 @@ html body .sec3 {
   padding: 14% 12% 0;
   clear: right;
   display: flex;
+  margin-bottom: 5%;
 }
-html body .sec3 img {
+html body .sec3 .wrapper {
   flex: 5;
+}
+html body .sec3 .wrapper img {
   width: 100%;
 }
 html body .sec3 .devops {
@@ -142,29 +192,216 @@ html body .sec3 .devops {
   margin-left: 9%;
 }
 html body .sec3 .devops p {
-  font-size: 14px;
   color: #858c97;
+}
+@media screen and (min-width: 1600px) {
+  html body .sec3 .devops h1 {
+    font-size: 48px;
+  }
+  html body .sec3 .devops h3 {
+    font-size: 18px;
+  }
+  html body .sec3 .devops p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  html body .sec3 .devops h1 {
+    font-size: 36px;
+  }
+  html body .sec3 .devops h3 {
+    font-size: 14px;
+  }
+  html body .sec3 .devops p {
+    font-size: 12px;
+  }
 }
 html body .sec4 {
   background: url("../img/forth/background1.png") no-repeat;
+  background-size: 100% 100%;
   display: flex;
-  background-size: 100% 70%;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15%;
+  margin-bottom: 10%;
 }
 html body .sec4 .monitor {
-  flex: 1;
-  padding: 5% 5%;
+  flex: 4;
+  padding-top: 13%;
 }
-html body .sec4 img {
-  flex: 1;
-  width: 80%;
+html body .sec4 .wrapper {
+  flex: 7;
+}
+html body .sec4 .wrapper img {
+  width: 100%;
+  margin-left: 4%;
+}
+@media screen and (min-width: 1600px) {
+  html body .sec4 h1 {
+    font-size: 48px;
+  }
+  html body .sec4 p {
+    font-size: 14px;
+  }
+  html body .sec4 h3 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  html body .sec4 h1 {
+    font-size: 36px;
+  }
+  html body .sec4 p {
+    font-size: 12px;
+  }
+  html body .sec4 h3 {
+    font-size: 14px;
+  }
 }
 html body .sec5 {
   display: flex;
-  padding: 0 13%;
+  box-sizing: border-box;
+  margin-bottom: 5%;
+  width: 100%;
+  padding: 0 10%;
+  background: url("../img/fifth/background.png") no-repeat;
+  background-size: 56% 100%;
 }
-html body .sec5 img {
-  flex: 1;
+html body .sec5 .wrapper {
+  flex: 5;
+}
+html body .sec5 .wrapper img {
+  width: 100%;
 }
 html body .sec5 .view {
+  flex: 3;
+  margin-left: 13%;
+  padding-top: 7%;
+}
+html body .sec5 .view p {
+  color: #858c97;
+}
+@media screen and (min-width: 1600px) {
+  html body .sec5 .view h1 {
+    font-size: 48px;
+  }
+  html body .sec5 .view h3 {
+    font-size: 18px;
+  }
+  html body .sec5 .view p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  html body .sec5 .view h1 {
+    font-size: 36px;
+  }
+  html body .sec5 .view h3 {
+    font-size: 14px;
+  }
+  html body .sec5 .view p {
+    font-size: 12px;
+  }
+}
+html body .sec6 {
+  background: url("../img/sixth/background.png") no-repeat;
+  background-position: right;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  background-size: 50% 100%;
+  padding: 0 15%;
+  margin-bottom: 10%;
+}
+html body .sec6 .joinus {
   flex: 1;
+  padding-top: 10%;
+}
+@media screen and (min-width: 1600px) {
+  html body .sec6 .joinus h1 {
+    font-size: 48px;
+  }
+  html body .sec6 .joinus p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  html body .sec6 .joinus h1 {
+    font-size: 40px;
+  }
+  html body .sec6 .joinus p {
+    font-size: 12px;
+  }
+}
+html body .sec6 .joinus p {
+  color: #858c97;
+}
+html body .sec6 .wrapper {
+  flex: 2;
+}
+html body .sec6 .wrapper img {
+  width: 78%;
+  margin-left: 15%;
+}
+html body .join {
+  background-image: linear-gradient(149deg, #9af9de 0%, #70a6fe 100%);
+  box-shadow: 0px 8px 20px 0px rgba(67, 175, 255, 0.29);
+  border-radius: 35px;
+  color: white;
+}
+@media screen and (min-width: 1600px) {
+  html body .join {
+    width: 120px;
+    height: 44px;
+    font-size: 13px;
+  }
+  html body .footer {
+    padding: 70px 300px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  html body .join {
+    width: 103px;
+    height: 34px;
+    font-size: 10px;
+  }
+  html body .footer {
+    padding: 70px 140px;
+  }
+}
+html body .footer {
+  background-color: #fbfcfc;
+  color: #c8ccd4;
+}
+html body .footer .content {
+  display: flex;
+  justify-content: space-between;
+}
+html body .footer .content .item {
+  flex: 1;
+}
+@media screen and (min-width: 1600px) {
+  html body .footer .content .item h3 {
+    font-size: 20px;
+  }
+  html body .footer .content .item p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  html body .footer .content .item h3 {
+    font-size: 14px;
+  }
+  html body .footer .content .item p {
+    font-size: 12px;
+  }
+}
+html body .footer .content .item h3 {
+  color: #101319;
+}
+html body .footer hr {
+  border: 1px solid #eaeaea;
+}
+html body .footer p {
+  font-size: 12px;
 }

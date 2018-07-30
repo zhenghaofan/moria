@@ -1,3 +1,7 @@
+@screen-xm: 1600px;
+@screen-md: 1601px;
+@screen-lg: 1602px;
+
 html {
   height: 100%;
   body {
@@ -12,6 +16,7 @@ html {
       background: url("../img/first/background.png") no-repeat;
       background-position: 100%;
       background-size: 57% 100%;
+      margin-bottom: -6%;
       .banner {
         height: 35px;
         position: relative;
@@ -31,9 +36,27 @@ html {
             margin-left: 10px;
           }
           button {
-            width: 70px;
-            height: 35px;
             border-radius: 5px;
+          }
+          @media screen and (min-width: @screen-xm) {
+            a {
+              font-size: 14px;
+            }
+            button {
+              width: 90px;
+              height: 44px;
+              font-size: 14px;
+            }
+          }
+          @media screen and (max-width: @screen-xm) {
+            a {
+              font-size: 12px;
+            }
+            button {
+              width: 63px;
+              height: 30px;
+              font-size: 12px;
+            }
           }
           .register {
             margin-left: 100px;
@@ -64,22 +87,27 @@ html {
             margin-bottom: 10px;
           }
           h1 {
-            font-size: 50px;
             margin-bottom: 10px;
+          }
+          @media screen and (min-width: @screen-xm) {
+            h1 {
+              font-size: 50px;
+            }
+            .description {
+              font-size: 18px;
+            }
+          }
+          @media screen and (max-width: @screen-xm) {
+            h1 {
+              font-size: 31px;
+            }
+            .description {
+              font-size: 14px;
+            }
           }
           .description {
-            font-size: 10px;
             color: #858c97;
             margin-bottom: 10px;
-          }
-          .join {
-            width: 120px;
-            height: 44px;
-            background-image: linear-gradient(149deg, #9af9de 0%, #70a6fe 100%);
-            box-shadow: 0px 8px 20px 0px rgba(67, 175, 255, 0.29);
-            border-radius: 35px;
-            color: white;
-            font-size: 13px;
           }
         }
         .paint1 {
@@ -95,24 +123,46 @@ html {
     .sec2 {
       .side-left {
         margin-bottom: -8%;
+        width: 18%;
       }
       .pros {
         padding: 0 21%;
+        margin-bottom: -6%;
         .blocks {
           display: flex;
           margin-bottom: 100px;
           .pro {
             flex: 1;
             margin: 0 10px;
+            @media screen and (min-width: @screen-xm) {
+              .num {
+                font-size: 72px;
+              }
+              h3 {
+                font-size: 20px;
+              }
+              p {
+                font-size: 14px;
+              }
+            }
+            @media screen and (max-width: @screen-xm) {
+              .num {
+                font-size: 64px;
+              }
+              h3 {
+                font-size: 18px;
+              }
+              p {
+                font-size: 12px;
+              }
+            }
             .num {
-              font-size: 60px;
               background: -webkit-linear-gradient(left, rgb(114, 206, 217), rgb(103, 178, 241)); /* 背景色渐变 */
               -webkit-background-clip: text; /* 规定背景的划分区域 */
               -webkit-text-fill-color: transparent; /* 防止字体颜色覆盖 */
               font-weight: bold;
             }
             p {
-              font-size: 14px;
               color: #858c97;
             }
           }
@@ -121,6 +171,7 @@ html {
       .side-right {
         float: right;
         margin-bottom: -23%;
+        width: 23%;
       }
     }
 
@@ -130,43 +181,243 @@ html {
       padding: 14% 12% 0;
       clear: right;
       display: flex;
-      img {
+      margin-bottom: 5%;
+      .wrapper {
         flex: 5;
-        width: 100%;
+        img {
+          width: 100%;
+        }
       }
       .devops {
         padding-top: 9%;
         flex: 3;
         margin-left: 9%;
         p {
-          font-size: 14px;
-	        color: #858c97;
+          color: #858c97;
+        }
+        @media screen and (min-width: @screen-xm) {
+          h1 {
+            font-size: 48px;
+          }
+          h3 {
+            font-size: 18px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+        @media screen and (max-width: @screen-xm) {
+          h1 {
+            font-size: 36px;
+          }
+          h3 {
+            font-size: 14px;
+          }
+          p {
+            font-size: 12px;
+          }
         }
       }
     }
 
     .sec4 {
       background: url("../img/forth/background1.png") no-repeat;
+      background-size: 100% 100%;
       display: flex;
-      background-size: 100% 70%;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0 15%;
+      margin-bottom: 10%;
       .monitor {
-        flex: 1;
-        padding: 5% 5%;
+        flex: 4;
+        padding-top: 13%;
       }
-      img {
-        flex: 1;
-        width: 80%;
+      .wrapper {
+        flex: 7;
+        img {
+          width: 100%;
+          margin-left: 4%;
+        }
+      }
+      @media screen and (min-width: @screen-xm) {
+        h1 {
+          font-size: 48px;
+        }
+        p {
+          font-size: 14px;
+        }
+        h3 {
+          font-size: 18px;
+        }
+      }
+
+      @media screen and (max-width: @screen-xm) {
+        h1 {
+          font-size: 36px;
+        }
+        p {
+          font-size: 12px;
+        }
+        h3 {
+          font-size: 14px;
+        }
       }
     }
 
     .sec5 {
       display: flex;
-      padding: 0 13%;
-      img {
-        flex: 1;
+      box-sizing: border-box;
+      margin-bottom: 5%;
+      width: 100%;
+      padding: 0 10%;
+      background: url("../img/fifth/background.png") no-repeat;
+      background-size: 56% 100%;
+      .wrapper {
+        flex: 5;
+        img {
+          width: 100%;
+        }
       }
       .view {
+        flex: 3;
+        margin-left: 13%;
+        padding-top: 7%;
+        p {
+          color: #858c97;
+        }
+        @media screen and (min-width: @screen-xm) {
+          h1 {
+            font-size: 48px;
+          }
+          h3 {
+            font-size: 18px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+
+        @media screen and (max-width: @screen-xm) {
+          h1 {
+            font-size: 36px;
+          }
+          h3 {
+            font-size: 14px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .sec6 {
+      background: url("../img/sixth/background.png") no-repeat;
+      background-position: right;
+      display: flex;
+      box-sizing: border-box;
+      width: 100%;
+      background-size: 50% 100%;
+      padding: 0 15%;
+      margin-bottom: 10%;
+      .joinus {
         flex: 1;
+        padding-top: 10%;
+        @media screen and (min-width: @screen-xm) {
+          h1 {
+            font-size: 48px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+
+        @media screen and (max-width: @screen-xm) {
+          h1 {
+            font-size: 40px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+        p {
+          color: #858c97;
+        }
+      }
+      .wrapper {
+        flex: 2; 
+        img {
+          width: 78%;
+          margin-left: 15%;
+        }
+      }
+    }
+
+    .join {
+      background-image: linear-gradient(149deg, #9af9de 0%, #70a6fe 100%);
+      box-shadow: 0px 8px 20px 0px rgba(67, 175, 255, 0.29);
+      border-radius: 35px;
+      color: white;
+    }
+
+    @media screen and (min-width: @screen-xm) {
+      .join {
+        width: 120px;
+        height: 44px;
+        font-size: 13px;
+      }
+      .footer {
+        padding: 70px 300px;
+      }
+    }
+
+    @media screen and (max-width: @screen-xm) {
+      .join {
+        width: 103px;
+        height: 34px;
+        font-size: 10px;
+      }
+      .footer {
+        padding: 70px 140px;
+      }
+    }
+
+    .footer {
+      background-color: #fbfcfc;
+      color: #c8ccd4;
+      .content {
+        display: flex;
+        justify-content: space-between;
+        .item {
+          flex: 1;
+          @media screen and (min-width: @screen-xm) {
+            h3 {
+              font-size: 20px;
+            }
+            p {
+              font-size: 18px;
+            }
+          }
+  
+          @media screen and (max-width: @screen-xm) {
+            h3 {
+              font-size: 14px;
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+          h3 {
+            color: #101319;
+          }
+          
+        }
+      }
+      hr {
+        border: 1px solid #eaeaea;
+      }
+      p {
+        font-size: 12px;
       }
     }
   }
