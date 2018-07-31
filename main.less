@@ -10,13 +10,28 @@ html {
     .sec {
       box-sizing: border-box;
     }
+    @media screen and (min-width: @screen-xm) {
+      .sec1 {
+        padding: 34px 50px;
+      }
+      .container {
+        padding: 7% 18%;
+      }
+    }
+    @media screen and (max-width: @screen-xm) {
+      .sec1 {
+        padding: 20px 50px;
+      }
+      .container {
+        padding: 7% 11%;
+      }
+    }
     .sec1 {
-      padding: 10px 50px;
       height: 100%;
       max-height: 1200px;
       background: url("../img/first/background.png") no-repeat;
       background-position: 100%;
-      background-size: 57% 100%;
+      background-size: 60% 100%;
       margin-bottom: -6%;
       .banner {
         height: 35px;
@@ -34,7 +49,6 @@ html {
           float: right;
           a {
             color: white;
-            margin-left: 10px;
           }
           button {
             border-radius: 5px;
@@ -42,32 +56,44 @@ html {
           @media screen and (min-width: @screen-xm) {
             a {
               font-size: 14px;
+              margin-left: 50px;
             }
             button {
               width: 90px;
               height: 44px;
               font-size: 14px;
             }
+            .register {
+              margin-left: 150px;
+            }
+            .login {
+              margin-right: 120px;
+            }
           }
           @media screen and (max-width: @screen-xm) {
             a {
               font-size: 12px;
+              margin-left: 37px;
             }
             button {
               width: 63px;
               height: 30px;
               font-size: 12px;
             }
+            .register {
+              margin-left: 138px;
+            }
+            .login {
+              margin-right: 50px;
+            }
           }
           .register {
-            margin-left: 100px;
             background-color: rgb(101, 141, 219);
             border: none;
             color: white;
           }
           .login {
             margin-left: 10px;
-            margin-right: 50px;
             color: rgb(66, 91, 219);
           }
         }
@@ -75,26 +101,26 @@ html {
       .container {
         display: flex;
         width: 100%;
-        padding: 7% 18%;
+        align-items: center;
         .text1 {
           flex: 5;
-          padding-top: 6%;
+          margin-bottom: 5%;
           .divider {
             height: 8px;
             width: 100px;
             background-color: rgb(102, 245, 224);
             border-radius: 5px;
-            margin-bottom: 10px;
           }
-          h1 {
-            margin-bottom: 10px;
-          }
+
           @media screen and (min-width: @screen-xm) {
             h1 {
               font-size: 50px;
             }
             .description {
-              font-size: 18px;
+              font-size: 16px;
+            }
+            .breakline {
+              margin-bottom: 30px;
             }
           }
           @media screen and (max-width: @screen-xm) {
@@ -104,10 +130,12 @@ html {
             .description {
               font-size: 14px;
             }
+            .breakline {
+              margin-bottom: 25px;
+            }
           }
           .description {
             color: #858c97;
-            margin-bottom: 10px;
           }
         }
         .paint1 {
@@ -131,9 +159,18 @@ html {
         .blocks {
           display: flex;
           margin-bottom: 100px;
+          @media screen and (min-width: @screen-xm) {
+            .pro {
+              margin: 0 40px;
+            }
+          }
+          @media screen and (max-width: @screen-xm) {
+            .pro {
+              margin: 0 10px;
+            }
+          }
           .pro {
             flex: 1;
-            margin: 0 10px;
             @media screen and (min-width: @screen-xm) {
               .num {
                 font-size: 72px;
@@ -180,7 +217,8 @@ html {
       padding: 14% 12% 0;
       clear: right;
       display: flex;
-      margin-bottom: 5%;
+      align-items: center;
+      margin-bottom: 7%;
       .wrapper {
         flex: 5;
         img {
@@ -188,7 +226,6 @@ html {
         }
       }
       .devops {
-        padding-top: 9%;
         flex: 3;
         margin-left: 9%;
         p {
@@ -223,12 +260,12 @@ html {
       background: url("../img/forth/background1.png") no-repeat;
       background-size: 100% 100%;
       display: flex;
+      align-items: center;
       width: 100%;
       padding: 0 15%;
-      margin-bottom: 10%;
+      margin-bottom: 12%;
       .monitor {
         flex: 4;
-        padding-top: 13%;
       }
       .wrapper {
         flex: 7;
@@ -264,7 +301,8 @@ html {
 
     .sec5 {
       display: flex;
-      margin-bottom: 5%;
+      align-items: center;
+      margin-bottom: 7%;
       width: 100%;
       padding: 0 10%;
       background: url("../img/fifth/background.png") no-repeat;
@@ -278,7 +316,6 @@ html {
       .view {
         flex: 3;
         margin-left: 13%;
-        padding-top: 7%;
         p {
           color: #858c97;
         }
@@ -312,13 +349,13 @@ html {
       background: url("../img/sixth/background.png") no-repeat;
       background-position: right;
       display: flex;
+      align-items: center;
       width: 100%;
-      background-size: 50% 100%;
+      background-size: 40% 100%;
       padding: 0 15%;
       margin-bottom: 10%;
       .joinus {
         flex: 1;
-        padding-top: 10%;
         @media screen and (min-width: @screen-xm) {
           h1 {
             font-size: 48px;
@@ -341,7 +378,7 @@ html {
         }
       }
       .wrapper {
-        flex: 2; 
+        flex: 2;
         img {
           width: 78%;
           margin-left: 15%;
@@ -350,31 +387,56 @@ html {
     }
 
     .join {
+      color: white;
+      border: transparent;
+    }
+
+    .top-join {
       background-image: linear-gradient(149deg, #9af9de 0%, #70a6fe 100%);
       box-shadow: 0px 8px 20px 0px rgba(67, 175, 255, 0.29);
       border-radius: 35px;
-      color: white;
+    }
+
+    .bottom-join {
+      background-image: linear-gradient(138deg, #8cdaff 0%, #7b86f6 95%, #707afe 100%);
+      box-shadow: 0px 7px 17px 0px rgba(77, 67, 255, 0.29);
+      border-radius: 29px;
+      margin-top: 20px;
     }
 
     @media screen and (min-width: @screen-xm) {
+      .summary {
+        margin-top: 38px;
+        margin-bottom: 40px;
+      }
       .join {
         width: 120px;
         height: 44px;
         font-size: 13px;
       }
       .footer {
-        padding: 70px 300px;
+        padding: 70px 300px 30px;
+        hr {
+          margin: 90px 0 30px;
+        }
       }
     }
 
     @media screen and (max-width: @screen-xm) {
+      .summary {
+        margin-top: 34px;
+        margin-bottom: 20px;
+      }
       .join {
         width: 103px;
         height: 34px;
         font-size: 10px;
       }
       .footer {
-        padding: 70px 140px;
+        padding: 70px 140px 30px;
+        hr {
+          margin: 60px 0 30px;
+        }
       }
     }
 
@@ -388,13 +450,13 @@ html {
           flex: 1;
           @media screen and (min-width: @screen-xm) {
             h3 {
-              font-size: 20px;
+              font-size: 16px;
             }
             p {
-              font-size: 18px;
+              font-size: 14px;
             }
           }
-  
+
           @media screen and (max-width: @screen-xm) {
             h3 {
               font-size: 14px;
@@ -406,7 +468,6 @@ html {
           h3 {
             color: #101319;
           }
-          
         }
       }
       hr {

@@ -8,13 +8,28 @@ html body {
 html body .sec {
   box-sizing: border-box;
 }
+@media screen and (min-width: 1600px) {
+  html body .sec1 {
+    padding: 34px 50px;
+  }
+  html body .container {
+    padding: 7% 18%;
+  }
+}
+@media screen and (max-width: 1600px) {
+  html body .sec1 {
+    padding: 20px 50px;
+  }
+  html body .container {
+    padding: 7% 11%;
+  }
+}
 html body .sec1 {
-  padding: 10px 50px;
   height: 100%;
   max-height: 1200px;
   background: url("../img/first/background.png") no-repeat;
   background-position: 100%;
-  background-size: 57% 100%;
+  background-size: 60% 100%;
   margin-bottom: -6%;
 }
 html body .sec1 .banner {
@@ -35,7 +50,6 @@ html body .sec1 .banner .info {
 }
 html body .sec1 .banner .info a {
   color: white;
-  margin-left: 10px;
 }
 html body .sec1 .banner .info button {
   border-radius: 5px;
@@ -43,59 +57,70 @@ html body .sec1 .banner .info button {
 @media screen and (min-width: 1600px) {
   html body .sec1 .banner .info a {
     font-size: 14px;
+    margin-left: 50px;
   }
   html body .sec1 .banner .info button {
     width: 90px;
     height: 44px;
     font-size: 14px;
   }
+  html body .sec1 .banner .info .register {
+    margin-left: 150px;
+  }
+  html body .sec1 .banner .info .login {
+    margin-right: 120px;
+  }
 }
 @media screen and (max-width: 1600px) {
   html body .sec1 .banner .info a {
     font-size: 12px;
+    margin-left: 37px;
   }
   html body .sec1 .banner .info button {
     width: 63px;
     height: 30px;
     font-size: 12px;
   }
+  html body .sec1 .banner .info .register {
+    margin-left: 138px;
+  }
+  html body .sec1 .banner .info .login {
+    margin-right: 50px;
+  }
 }
 html body .sec1 .banner .info .register {
-  margin-left: 100px;
   background-color: #658ddb;
   border: none;
   color: white;
 }
 html body .sec1 .banner .info .login {
   margin-left: 10px;
-  margin-right: 50px;
   color: #425bdb;
 }
 html body .sec1 .container {
   display: flex;
   width: 100%;
-  padding: 7% 18%;
+  align-items: center;
 }
 html body .sec1 .container .text1 {
   flex: 5;
-  padding-top: 6%;
+  margin-bottom: 5%;
 }
 html body .sec1 .container .text1 .divider {
   height: 8px;
   width: 100px;
   background-color: #66f5e0;
   border-radius: 5px;
-  margin-bottom: 10px;
-}
-html body .sec1 .container .text1 h1 {
-  margin-bottom: 10px;
 }
 @media screen and (min-width: 1600px) {
   html body .sec1 .container .text1 h1 {
     font-size: 50px;
   }
   html body .sec1 .container .text1 .description {
-    font-size: 18px;
+    font-size: 16px;
+  }
+  html body .sec1 .container .text1 .breakline {
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 1600px) {
@@ -105,10 +130,12 @@ html body .sec1 .container .text1 h1 {
   html body .sec1 .container .text1 .description {
     font-size: 14px;
   }
+  html body .sec1 .container .text1 .breakline {
+    margin-bottom: 25px;
+  }
 }
 html body .sec1 .container .text1 .description {
   color: #858c97;
-  margin-bottom: 10px;
 }
 html body .sec1 .container .paint1 {
   flex: 8;
@@ -129,9 +156,18 @@ html body .sec2 .pros .blocks {
   display: flex;
   margin-bottom: 100px;
 }
+@media screen and (min-width: 1600px) {
+  html body .sec2 .pros .blocks .pro {
+    margin: 0 40px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  html body .sec2 .pros .blocks .pro {
+    margin: 0 10px;
+  }
+}
 html body .sec2 .pros .blocks .pro {
   flex: 1;
-  margin: 0 10px;
 }
 @media screen and (min-width: 1600px) {
   html body .sec2 .pros .blocks .pro .num {
@@ -177,7 +213,8 @@ html body .sec3 {
   padding: 14% 12% 0;
   clear: right;
   display: flex;
-  margin-bottom: 5%;
+  align-items: center;
+  margin-bottom: 7%;
 }
 html body .sec3 .wrapper {
   flex: 5;
@@ -186,7 +223,6 @@ html body .sec3 .wrapper img {
   width: 100%;
 }
 html body .sec3 .devops {
-  padding-top: 9%;
   flex: 3;
   margin-left: 9%;
 }
@@ -219,13 +255,13 @@ html body .sec4 {
   background: url("../img/forth/background1.png") no-repeat;
   background-size: 100% 100%;
   display: flex;
+  align-items: center;
   width: 100%;
   padding: 0 15%;
-  margin-bottom: 10%;
+  margin-bottom: 12%;
 }
 html body .sec4 .monitor {
   flex: 4;
-  padding-top: 13%;
 }
 html body .sec4 .wrapper {
   flex: 7;
@@ -258,7 +294,8 @@ html body .sec4 .wrapper img {
 }
 html body .sec5 {
   display: flex;
-  margin-bottom: 5%;
+  align-items: center;
+  margin-bottom: 7%;
   width: 100%;
   padding: 0 10%;
   background: url("../img/fifth/background.png") no-repeat;
@@ -273,7 +310,6 @@ html body .sec5 .wrapper img {
 html body .sec5 .view {
   flex: 3;
   margin-left: 13%;
-  padding-top: 7%;
 }
 html body .sec5 .view p {
   color: #858c97;
@@ -304,14 +340,14 @@ html body .sec6 {
   background: url("../img/sixth/background.png") no-repeat;
   background-position: right;
   display: flex;
+  align-items: center;
   width: 100%;
-  background-size: 50% 100%;
+  background-size: 40% 100%;
   padding: 0 15%;
   margin-bottom: 10%;
 }
 html body .sec6 .joinus {
   flex: 1;
-  padding-top: 10%;
 }
 @media screen and (min-width: 1600px) {
   html body .sec6 .joinus h1 {
@@ -340,29 +376,52 @@ html body .sec6 .wrapper img {
   margin-left: 15%;
 }
 html body .join {
+  color: white;
+  border: transparent;
+}
+html body .top-join {
   background-image: linear-gradient(149deg, #9af9de 0%, #70a6fe 100%);
   box-shadow: 0px 8px 20px 0px rgba(67, 175, 255, 0.29);
   border-radius: 35px;
-  color: white;
+}
+html body .bottom-join {
+  background-image: linear-gradient(138deg, #8cdaff 0%, #7b86f6 95%, #707afe 100%);
+  box-shadow: 0px 7px 17px 0px rgba(77, 67, 255, 0.29);
+  border-radius: 29px;
+  margin-top: 20px;
 }
 @media screen and (min-width: 1600px) {
+  html body .summary {
+    margin-top: 38px;
+    margin-bottom: 40px;
+  }
   html body .join {
     width: 120px;
     height: 44px;
     font-size: 13px;
   }
   html body .footer {
-    padding: 70px 300px;
+    padding: 70px 300px 30px;
+  }
+  html body .footer hr {
+    margin: 90px 0 30px;
   }
 }
 @media screen and (max-width: 1600px) {
+  html body .summary {
+    margin-top: 34px;
+    margin-bottom: 20px;
+  }
   html body .join {
     width: 103px;
     height: 34px;
     font-size: 10px;
   }
   html body .footer {
-    padding: 70px 140px;
+    padding: 70px 140px 30px;
+  }
+  html body .footer hr {
+    margin: 60px 0 30px;
   }
 }
 html body .footer {
@@ -378,10 +437,10 @@ html body .footer .content .item {
 }
 @media screen and (min-width: 1600px) {
   html body .footer .content .item h3 {
-    font-size: 20px;
+    font-size: 16px;
   }
   html body .footer .content .item p {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 1600px) {
