@@ -73,32 +73,26 @@ window.onscroll = function () {
     addClassOnScroll('sec3-wrapper', 'text1-anim');
     addClassOnScroll('devops', 'paint-main-anim');
   }
+
+  const el4 = document.getElementsByClassName('monitor')[0];
+  if (!isElementInViewport(el4)) {
+    console.log('scroll4')
+    addClassOnScroll('monitor', 'monitor-anim');
+    addClassOnScroll('man', 'man-anim');
+    addClassOnScroll('woman', 'woman-anim');
+  }
+
   const el5 = document.getElementsByClassName('sec5-wrapper')[0];
   if (!isElementInViewport(el5)) {
     console.log('scroll5')
     addClassOnScroll('sec5-wrapper', 'text1-anim');
     addClassOnScroll('view', 'paint-main-anim');
   }
-}
 
-// window.onscroll = function (e) {
-//   const el = document.getElementsByClassName('text1')[0];
-//   const height = el.offsetTop + el.clientHeight;
-//   const scrollY = document.documentElement.scrollTop || document.body.scrollTop;
-//   // if (height < scrollY && !isElementInViewport(el)) {
-//   //   // addClassOnScroll('text1', 'text1-anim');
-//   //   console.log('----')
-//   //   addClassOnScroll('text1', 'text1-anim')
-//   //   addClassOnScroll('paint-woman', 'paint-woman-anim');
-//   //   addClassOnScroll('paint-man', 'paint-man-anim');
-//   //   addClassOnScroll('paint-main', 'paint-main-anim');
-//   // }
-//   const el2 = document.getElementsByClassName('pros')[0];
-//   const height1 = el2.offsetTop;
-//   const height2 = el2.offsetTop + el2.clientHeight;
-//   // console.log(isElementInViewport(el2, scrollY))
-//   if (height1 < scrollY && scrollY < height2 && !isElementInViewport(el2, scrollY)) {
-//     // console.log('++++')
-//     addClassOnScroll('pros', 'pros-anim');
-//   }
-// }
+  const el6 = document.getElementsByClassName('sec6-wrapper')[0];
+  if (!isElementInViewport(el6)) {
+    console.log('scroll6')
+    addClassOnScroll('joinus', 'text1-anim');
+    addClassOnScroll('sec6-wrapper', 'paint-main-anim');
+  }
+}
