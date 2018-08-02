@@ -1,6 +1,4 @@
 @screen-xm: 1600px;
-@screen-md: 1601px;
-@screen-lg: 1602px;
 
 html {
   height: 100%;
@@ -105,6 +103,8 @@ html {
         .text1 {
           flex: 5;
           margin-bottom: 5%;
+          opacity: 0;
+          // animation: textIn 0.6s linear;
           .divider {
             height: 8px;
             width: 100px;
@@ -141,10 +141,90 @@ html {
         .paint1 {
           flex: 8;
           margin-left: 6%;
-          img {
+          position: relative;
+          .paint-woman {
+            position: absolute;
+            top: 15px;
+            right: 159px;
+            opacity: 0;
+            // animation: womanIn 0.68s linear;
+            z-index: 1;
+          }
+          .paint-main {
             width: 100%;
+            opacity: 0;
+            // animation: mainIn 0.6s linear;
+          }
+          .paint-man {
+            width: 14%;
+            position: absolute;
+            opacity: 0;
+            // animation: manIn 0.68s linear;
+            bottom: 55px;
+            left: 49px;
           }
         }
+      }
+    }
+
+    .text1-anim {
+      animation: textIn 0.6s linear;
+    }
+    .paint-woman-anim {
+      animation: womanIn 0.68s linear;
+    }
+    .paint-main-anim {
+      animation: mainIn 0.6s linear;
+    }
+    .paint-man-anim {
+      animation: manIn 0.68s linear;
+    }
+
+    @keyframes textIn {
+      from {
+        transform: translate(-30px, 0);
+        opacity: 0;
+      }
+      to {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes mainIn {
+      from {
+        transform: translate(30px, 0);
+        opacity: 0;
+      }
+      to {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes manIn {
+      from {
+        bottom: 10px;
+        left: 49px;
+        opacity: 0;
+      }
+      to {
+        bottom: 55px;
+        left: 49px;
+        opacity: 1;
+      }
+    }
+
+    @keyframes womanIn {
+      from {
+        top: -50px;
+        right: 159px;
+        opacity: 0;
+      }
+      to {
+        top: 15px;
+        right: 159px;
+        opacity: 1;
       }
     }
 
@@ -156,6 +236,7 @@ html {
       .pros {
         padding: 0 21%;
         margin-bottom: -6%;
+        opacity: 0;
         .blocks {
           display: flex;
           margin-bottom: 100px;
@@ -164,7 +245,7 @@ html {
               margin: 0 40px;
             }
           }
-          @media screen and (max-width: @screen-xm) {
+          @media scren and (max-width: @screen-xm) {
             .pro {
               margin: 0 10px;
             }
@@ -205,10 +286,24 @@ html {
           }
         }
       }
+      .pros-anim {
+        animation: prosIn 0.6s linear;
+      }
       .side-right {
         float: right;
         margin-bottom: -23%;
         width: 23%;
+      }
+    }
+
+    @keyframes prosIn {
+      from {
+        transform: translate(0, 100px);
+        opacity: 0;
+      }
+      to {
+        transform: translate(0, 0);
+        opacity: 1;
       }
     }
 
@@ -219,7 +314,8 @@ html {
       display: flex;
       align-items: center;
       margin-bottom: 7%;
-      .wrapper {
+      .sec3-wrapper {
+        opacity: 0;
         flex: 5;
         img {
           width: 100%;
@@ -228,6 +324,7 @@ html {
       .devops {
         flex: 3;
         margin-left: 9%;
+        opacity: 0;
         p {
           color: #858c97;
         }
@@ -267,12 +364,26 @@ html {
       .monitor {
         flex: 4;
       }
-      .wrapper {
+      .sec4-wrapper {
         flex: 7;
+        position: relative;
         img {
           width: 100%;
-          margin-left: 4%;
+          margin-left: 14%;
         }
+        // .man {
+        //   position: absolute;
+        //   width: 44%;
+        //   right: 45px;
+        // }
+        // .woman {
+        //   position: absolute;
+        //   width: 80%;
+        // }
+        // .paper {
+        //   position: absolute;
+        //   width: 100%;
+        // }
       }
       @media screen and (min-width: @screen-xm) {
         h1 {
@@ -307,13 +418,15 @@ html {
       padding: 0 10%;
       background: url("../img/fifth/background.png") no-repeat;
       background-size: 56% 100%;
-      .wrapper {
+      .sec5-wrapper {
+        opacity: 0;
         flex: 5;
         img {
           width: 100%;
         }
       }
       .view {
+        opacity: 0;
         flex: 3;
         margin-left: 13%;
         p {

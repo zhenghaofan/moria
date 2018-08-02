@@ -105,6 +105,7 @@ html body .sec1 .container {
 html body .sec1 .container .text1 {
   flex: 5;
   margin-bottom: 5%;
+  opacity: 0;
 }
 html body .sec1 .container .text1 .divider {
   height: 8px;
@@ -140,9 +141,81 @@ html body .sec1 .container .text1 .description {
 html body .sec1 .container .paint1 {
   flex: 8;
   margin-left: 6%;
+  position: relative;
 }
-html body .sec1 .container .paint1 img {
+html body .sec1 .container .paint1 .paint-woman {
+  position: absolute;
+  top: 15px;
+  right: 159px;
+  opacity: 0;
+  z-index: 1;
+}
+html body .sec1 .container .paint1 .paint-main {
   width: 100%;
+  opacity: 0;
+}
+html body .sec1 .container .paint1 .paint-man {
+  width: 14%;
+  position: absolute;
+  opacity: 0;
+  bottom: 55px;
+  left: 49px;
+}
+html body .text1-anim {
+  animation: textIn 0.6s linear;
+}
+html body .paint-woman-anim {
+  animation: womanIn 0.68s linear;
+}
+html body .paint-main-anim {
+  animation: mainIn 0.6s linear;
+}
+html body .paint-man-anim {
+  animation: manIn 0.68s linear;
+}
+@keyframes textIn {
+  from {
+    transform: translate(-30px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes mainIn {
+  from {
+    transform: translate(30px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes manIn {
+  from {
+    bottom: 10px;
+    left: 49px;
+    opacity: 0;
+  }
+  to {
+    bottom: 55px;
+    left: 49px;
+    opacity: 1;
+  }
+}
+@keyframes womanIn {
+  from {
+    top: -50px;
+    right: 159px;
+    opacity: 0;
+  }
+  to {
+    top: 15px;
+    right: 159px;
+    opacity: 1;
+  }
 }
 html body .sec2 .side-left {
   margin-bottom: -8%;
@@ -151,6 +224,7 @@ html body .sec2 .side-left {
 html body .sec2 .pros {
   padding: 0 21%;
   margin-bottom: -6%;
+  opacity: 0;
 }
 html body .sec2 .pros .blocks {
   display: flex;
@@ -161,7 +235,7 @@ html body .sec2 .pros .blocks {
     margin: 0 40px;
   }
 }
-@media screen and (max-width: 1600px) {
+@media scren and (max-width: 1600px) {
   html body .sec2 .pros .blocks .pro {
     margin: 0 10px;
   }
@@ -203,10 +277,23 @@ html body .sec2 .pros .blocks .pro .num {
 html body .sec2 .pros .blocks .pro p {
   color: #858c97;
 }
+html body .sec2 .pros-anim {
+  animation: prosIn 0.6s linear;
+}
 html body .sec2 .side-right {
   float: right;
   margin-bottom: -23%;
   width: 23%;
+}
+@keyframes prosIn {
+  from {
+    transform: translate(0, 100px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
 }
 html body .sec3 {
   width: 100%;
@@ -216,15 +303,17 @@ html body .sec3 {
   align-items: center;
   margin-bottom: 7%;
 }
-html body .sec3 .wrapper {
+html body .sec3 .sec3-wrapper {
+  opacity: 0;
   flex: 5;
 }
-html body .sec3 .wrapper img {
+html body .sec3 .sec3-wrapper img {
   width: 100%;
 }
 html body .sec3 .devops {
   flex: 3;
   margin-left: 9%;
+  opacity: 0;
 }
 html body .sec3 .devops p {
   color: #858c97;
@@ -263,12 +352,13 @@ html body .sec4 {
 html body .sec4 .monitor {
   flex: 4;
 }
-html body .sec4 .wrapper {
+html body .sec4 .sec4-wrapper {
   flex: 7;
+  position: relative;
 }
-html body .sec4 .wrapper img {
+html body .sec4 .sec4-wrapper img {
   width: 100%;
-  margin-left: 4%;
+  margin-left: 14%;
 }
 @media screen and (min-width: 1600px) {
   html body .sec4 h1 {
@@ -301,13 +391,15 @@ html body .sec5 {
   background: url("../img/fifth/background.png") no-repeat;
   background-size: 56% 100%;
 }
-html body .sec5 .wrapper {
+html body .sec5 .sec5-wrapper {
+  opacity: 0;
   flex: 5;
 }
-html body .sec5 .wrapper img {
+html body .sec5 .sec5-wrapper img {
   width: 100%;
 }
 html body .sec5 .view {
+  opacity: 0;
   flex: 3;
   margin-left: 13%;
 }
