@@ -80,6 +80,7 @@ window.onscroll = function () {
     addClassOnScroll('monitor', 'monitor-anim');
     addClassOnScroll('man', 'man-anim');
     addClassOnScroll('woman', 'woman-anim');
+    addClassOnScroll('paper', 'paper-anim');
   }
 
   const el5 = document.getElementsByClassName('sec5-wrapper')[0];

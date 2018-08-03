@@ -356,7 +356,7 @@ html {
     .sec4 {
       background: url("../img/forth/background1.png") no-repeat;
       background-size: 100% 100%;
-      height: 742px;
+      // height: 742px;
       display: flex;
       align-items: center;
       width: 100%;
@@ -377,20 +377,17 @@ html {
         .man {
           position: absolute;
           width: 40%;
-          right: 248px;
-          top: -176px;
           opacity: 0;
         }
         .woman {
           position: absolute;
-          width: 71%;
-          bottom: -95px;
-          left: 76px;
           opacity: 0;
         }
         .paper {
           position: absolute;
           width: 72%;
+          opacity: 0;
+          bottom: -18px;
         }
       }
       @media screen and (min-width: @screen-xm) {
@@ -418,6 +415,90 @@ html {
       }
     }
 
+    @media screen and (min-width: @screen-xm) {
+      .sec4 {
+        height: 742px;
+        .sec4-wrapper {
+          .man {
+            right: 248px;
+            top: -176px;
+          }
+          .woman {
+            width: 71%;
+            bottom: -95px;
+            left: 76px;
+          }
+        }
+      }
+      @keyframes man2In {
+        from {
+          right: 248px;
+          top: -203px;
+          opacity: 0;
+        }
+        to {
+          right: 248px;
+          top: -176px;
+          opacity: 1;
+        }
+      }
+
+      @keyframes woman2In {
+        from {
+          bottom: -117px;
+          left: 76px;
+          opacity: 0;
+        }
+        to {
+          bottom: -95px;
+          left: 76px;
+          opacity: 1;
+        }
+      }
+    }
+
+    @media screen and (max-width: @screen-xm) {
+      .sec4 {
+        height: 610px;
+        .sec4-wrapper {
+          .man {
+            right: 182px;
+            top: -78px;
+          }
+          .woman {
+            width: 84%;
+            bottom: -23px;
+            left: 7px;
+          }
+        }
+      }
+      @keyframes man2In {
+        from {
+          right: 182px;
+          top: -108px;
+          opacity: 0;
+        }
+        to {
+          right: 182px;
+          top: -78px;
+          opacity: 1;
+        }
+      }
+
+      @keyframes woman2In {
+        from {
+          bottom: -53px;
+          left: 7px;
+          opacity: 0;
+        }
+        to {
+          bottom: -23px;
+          left: 7px;
+          opacity: 1;
+        }
+      }
+    }
+
     .monitor-anim {
       animation: monitorIn 0.6s linear;
     }
@@ -428,6 +509,10 @@ html {
 
     .man-anim {
       animation: man2In 0.6s linear;
+    }
+
+    .paper-anim {
+      animation: paperIn 0.6s linear;
     }
 
     @keyframes monitorIn {
@@ -441,28 +526,39 @@ html {
       }
     }
 
-    @keyframes man2In {
-      from {
-        right: 248px;
-        top: -203px;
-        opacity: 0;
-      }
-      to {
-        right: 248px;
-        top: -176px;
-        opacity: 1;
-      }
-    }
+    // @keyframes man2In {
+    //   from {
+    //     right: 248px;
+    //     top: -203px;
+    //     opacity: 0;
+    //   }
+    //   to {
+    //     right: 248px;
+    //     top: -176px;
+    //     opacity: 1;
+    //   }
+    // }
 
-    @keyframes woman2In {
+    // @keyframes woman2In {
+    //   from {
+    //     bottom: -117px;
+    //     left: 76px;
+    //     opacity: 0;
+    //   }
+    //   to {
+    //     bottom: -95px;
+    //     left: 76px;
+    //     opacity: 1;
+    //   }
+    // }
+
+    @keyframes paperIn {
       from {
-        bottom: -117px;
-        left: 76px;
+        bottom: -63px;
         opacity: 0;
       }
       to {
-        bottom: -95px;
-        left: 76px;
+        bottom: -18px;
         opacity: 1;
       }
     }

@@ -343,7 +343,6 @@ html body .sec3 .devops p {
 html body .sec4 {
   background: url("../img/forth/background1.png") no-repeat;
   background-size: 100% 100%;
-  height: 742px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -362,20 +361,17 @@ html body .sec4 .sec4-wrapper {
 html body .sec4 .sec4-wrapper .man {
   position: absolute;
   width: 40%;
-  right: 248px;
-  top: -176px;
   opacity: 0;
 }
 html body .sec4 .sec4-wrapper .woman {
   position: absolute;
-  width: 71%;
-  bottom: -95px;
-  left: 76px;
   opacity: 0;
 }
 html body .sec4 .sec4-wrapper .paper {
   position: absolute;
   width: 72%;
+  opacity: 0;
+  bottom: -18px;
 }
 @media screen and (min-width: 1600px) {
   html body .sec4 h1 {
@@ -399,6 +395,82 @@ html body .sec4 .sec4-wrapper .paper {
     font-size: 14px;
   }
 }
+@media screen and (min-width: 1600px) {
+  html body .sec4 {
+    height: 742px;
+  }
+  html body .sec4 .sec4-wrapper .man {
+    right: 248px;
+    top: -176px;
+  }
+  html body .sec4 .sec4-wrapper .woman {
+    width: 71%;
+    bottom: -95px;
+    left: 76px;
+  }
+  @keyframes man2In {
+    from {
+      right: 248px;
+      top: -203px;
+      opacity: 0;
+    }
+    to {
+      right: 248px;
+      top: -176px;
+      opacity: 1;
+    }
+  }
+  @keyframes woman2In {
+    from {
+      bottom: -117px;
+      left: 76px;
+      opacity: 0;
+    }
+    to {
+      bottom: -95px;
+      left: 76px;
+      opacity: 1;
+    }
+  }
+}
+@media screen and (max-width: 1600px) {
+  html body .sec4 {
+    height: 610px;
+  }
+  html body .sec4 .sec4-wrapper .man {
+    right: 182px;
+    top: -78px;
+  }
+  html body .sec4 .sec4-wrapper .woman {
+    width: 84%;
+    bottom: -23px;
+    left: 7px;
+  }
+  @keyframes man2In {
+    from {
+      right: 182px;
+      top: -108px;
+      opacity: 0;
+    }
+    to {
+      right: 182px;
+      top: -78px;
+      opacity: 1;
+    }
+  }
+  @keyframes woman2In {
+    from {
+      bottom: -53px;
+      left: 7px;
+      opacity: 0;
+    }
+    to {
+      bottom: -23px;
+      left: 7px;
+      opacity: 1;
+    }
+  }
+}
 html body .monitor-anim {
   animation: monitorIn 0.6s linear;
 }
@@ -407,6 +479,9 @@ html body .woman-anim {
 }
 html body .man-anim {
   animation: man2In 0.6s linear;
+}
+html body .paper-anim {
+  animation: paperIn 0.6s linear;
 }
 @keyframes monitorIn {
   from {
@@ -418,27 +493,13 @@ html body .man-anim {
     opacity: 1;
   }
 }
-@keyframes man2In {
+@keyframes paperIn {
   from {
-    right: 248px;
-    top: -203px;
+    bottom: -63px;
     opacity: 0;
   }
   to {
-    right: 248px;
-    top: -176px;
-    opacity: 1;
-  }
-}
-@keyframes woman2In {
-  from {
-    bottom: -117px;
-    left: 76px;
-    opacity: 0;
-  }
-  to {
-    bottom: -95px;
-    left: 76px;
+    bottom: -18px;
     opacity: 1;
   }
 }
